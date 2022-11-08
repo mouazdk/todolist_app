@@ -1,7 +1,7 @@
 .input_box{
     width: 90%;
     padding: 1em;
-    font-size: 25px;
+    font-size: 21px;
     border: none;
     background-color: white;
     color: black;
@@ -23,4 +23,42 @@
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     border: none;
+}
+.todo_list {
+   display: flex;
+   justify-content: space-evenly;
+   width: 90%;
+   flex-wrap: wrap;
+
+}
+.todo_list_item{
+    font-family: monospace;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: black;
+    margin-top: 1em;
+    display: flex;
+}
+.todo_done {
+    font-family: monospace;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: green;
+    margin-top: 1em;
+    display: flex;
+    text-decoration:line-through;
+}
+.icon{
+    display: block;
+    float: right;
+    align-content: center;
+    padding: 1px 1px 1px 1px;
+    border: 2px solid white;
+    border-radius: 50px;
+    color: green;
+    background-color: white;
+    font-size: 35px;
+
 }
