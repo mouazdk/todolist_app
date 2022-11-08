@@ -1,5 +1,5 @@
 # Todolist App 
-** Made with Vite + React + Typescript **
+**Made with Vite + React + Typescript**
 
 Steps to do in the terminal: 
 -   clone the repo
