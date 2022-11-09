@@ -23,6 +23,7 @@
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     border: none;
+    background-color: blueviolet;
 }
 .todo_list {
    display: flex;
