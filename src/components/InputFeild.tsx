@@ -3,13 +3,13 @@ import "./style.css";
 
 interface Props {
   value: string;
-  setTodo: React.Dispatch<React.SetStateAction<string>>; // ? setTodo type i got it from "App.tsx" by hovering on setTodo
+  onSubmit: React.Dispatch<React.SetStateAction<string>>; // ? onSubmit type i got it from "App.tsx" by hovering on onSubmit
   handleAdd: (e: React.FormEvent) => void; // ? https://stackoverflow.com/a/48176960
 }
 
 const InputFeild: React.FunctionComponent<Props> = ({
   value,
-  setTodo,
+  onSubmit,
   handleAdd,
 }: Props) => {
   return (
@@ -19,7 +19,7 @@ const InputFeild: React.FunctionComponent<Props> = ({
         placeholder="What do you want to do?"
         className="input--box"
         value={value}
-        onChange={(temp) => setTodo(temp.target.value)}
+        onChange={(temp) => onSubmit(temp.target.value)}
       />
 
       <button className="input--submit-button" type="submit">
