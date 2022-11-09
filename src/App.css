@@ -6,15 +6,7 @@
   
 }
 
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
-}
-
-.App {
+.app {
   width: 100vw;
   height: 100vw;
   display: flex;

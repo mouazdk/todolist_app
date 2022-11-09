@@ -1,6 +1,6 @@
 interface Todo{
     id: number,
-    todo: string,
+    value: string,
     isDone: boolean
 }
 export default Todo;

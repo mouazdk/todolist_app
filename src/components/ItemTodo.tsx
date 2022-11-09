@@ -4,30 +4,32 @@ import { MdDone, MdDeleteForever } from "react-icons/md";
 import TodoList from "./TodoList";
 
 type Props = {
-  todo: Todo;
+  value: Todo;
   todos: Todo[];
-  setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
+  onComplete: React.Dispatch<React.SetStateAction<Todo[]>>;
 };
 
-const ItemTodo = ({ todo, todos, setTodos }: Props) => {
-    const handleDone = (id: number) => {
-        setTodos(todos.map((todo) => todo.id===id? {...todo, isDone: !todo.isDone}:todo))
-    }
+const ItemTodo = ({ value, todos, onComplete }: Props) => {
+  const handleDone = (id: number) => {
+    onComplete(
+      todos.map((value) =>
+        value.id === id ? { ...value, isDone: !value.isDone } : value
+      )
+    );
+  };
   return (
-    <form action="" className="todos_single">
-        {todo.isDone ? (
-            <span className="todo_done">
-                {todo.todo}
-            </span>
-        ) :( 
-      <span className="todo_list_item">{todo.todo}</span>
-        )}
+    <div>
+      {value.isDone ? (
+        <span className="todo--done">{value.value}</span>
+      ) : (
+        <span className="todo--list-item">{value.value}</span>
+      )}
       <div>
-        <span className="icon" onClick={() =>handleDone(todo.id)}>
+        <span className="icon" onClick={() => handleDone(value.id)}>
           <MdDone />
         </span>
       </div>
-    </form>
+    </div>
   );
 };
 
