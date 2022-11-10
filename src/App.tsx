@@ -13,7 +13,7 @@ const userName = "Mouaz";
 // usememo
 
 export default function App() {
-  const { handleAdd, handleTotoComplete, setTodo, todo, todos } = useTodos();
+  const { handleAdd, handleTodoComplete, setTodo, todo, todos } = useTodos();
 
   // * example for useMemo
   // const openTodos = useMemo(() => todos.filter((t) => !t.isDone), [todos]);
@@ -24,7 +24,7 @@ export default function App() {
       <span className="header">ToDo List App</span>
 
       <InputField value={todo} onChange={setTodo} onSubmit={handleAdd} />
-      <TodoList todos={todos} onComplete={handleTotoComplete} />
+      <TodoList todos={todos} onComplete={handleTodoComplete} />
     </div>
   );
 }

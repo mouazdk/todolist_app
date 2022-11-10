@@ -12,7 +12,7 @@ export default function useTodos() {
     }
   };
 
-  const handleTotoComplete = (id: number) =>
+  const handleTodoComplete = (id: number) =>
     setTodos(
       todos.map((value) =>
         value.id === id ? { ...value, isDone: !value.isDone } : value
@@ -21,7 +21,7 @@ export default function useTodos() {
 
   return {
     handleAdd,
-    handleTotoComplete,
+    handleTodoComplete,
     todos,
     todo,
     setTodo,
