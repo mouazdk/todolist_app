@@ -1,36 +1,22 @@
-import React from "react";
 import Todo from "../model";
-import { MdDone, MdDeleteForever } from "react-icons/md";
-import TodoList from "./TodoList";
+import { MdDone } from "react-icons/md";
 
-type Props = {
-  value: Todo;
-  todos: Todo[];
-  onComplete: React.Dispatch<React.SetStateAction<Todo[]>>;
+type ItemTodoProps = {
+  onComplete: (id: number) => void;
+  todo: Todo;
 };
 
-const ItemTodo = ({ value, todos, onComplete }: Props) => {
-  const handleDone = (id: number) => {
-    onComplete(
-      todos.map((value) =>
-        value.id === id ? { ...value, isDone: !value.isDone } : value
-      )
-    );
-  };
+export default function ItemTodo({ todo, onComplete }: ItemTodoProps) {
   return (
     <div>
-      {value.isDone ? (
-        <span className="todo--done">{value.value}</span>
-      ) : (
-        <span className="todo--list-item">{value.value}</span>
-      )}
+      <span className={`todo--list-item${todo.isDone ? " todo--done" : ""}`}>
+        {todo.value}
+      </span>
       <div>
-        <span className="icon" onClick={() => handleDone(value.id)}>
+        <span className="icon" onClick={() => onComplete(todo.id)}>
           <MdDone />
         </span>
       </div>
     </div>
   );
-};
-
-export default ItemTodo;
+}

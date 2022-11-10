@@ -1,30 +1,10 @@
-.input--box{
-    width: 90%;
-    padding: 1em;
-    font-size: 21px;
-    border: none;
-    background-color: white;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-}
 .input--form {
     display: flex;
     width: 50%;
     position: relative;
     align-items: center;
 }
-.input--box:focus {
-    box-shadow: 0 0 10px 1000px rgba(20, 20, 20, 0.567);
-    outline: none;
-}
-.input--submit-button{
-    margin: 1em;
-    color: white;
-    font-weight: 700;
-    font-family: Arial, Helvetica, sans-serif;
-    border: none;
-    background-color: blueviolet;
-}
+
 .todo--list {
    display: flex;
    justify-content: space-evenly;
@@ -32,7 +12,7 @@
    flex-wrap: wrap;
 
 }
-.todo--list-item{
+.todo--list-item {
     font-family: monospace;
     font-size: 25px;
     border-radius: 10px;
@@ -42,15 +22,10 @@
     display: flex;
 }
 .todo--done {
-    font-family: monospace;
-    font-size: 25px;
-    border-radius: 10px;
-    padding: 1em;
     background-color: green;
-    margin-top: 1em;
-    display: flex;
     text-decoration:line-through;
 }
+
 .icon{
     display: block;
     float: right;

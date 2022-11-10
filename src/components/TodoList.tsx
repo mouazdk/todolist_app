@@ -3,27 +3,17 @@ import Todo from "../model";
 import ItemTodo from "./ItemTodo";
 import "./style.css";
 
-interface Props {
+type TodoListProps = {
   todos: Todo[];
-  onComplete: React.Dispatch<React.SetStateAction<Todo[]>>; // * define it from App.tsx by hovering on onComplete
-}
+  onComplete: React.ComponentProps<typeof ItemTodo>["onComplete"];
+};
 
-const TodoList: React.FunctionComponent<Props> = ({
-  todos,
-  onComplete,
-}: Props) => {
+export default function TodoList({ todos, onComplete }: TodoListProps) {
   return (
     <div className="todo--list">
-      {todos.map((value) => (
-        <ItemTodo
-          value={value}
-          key={value.id}
-          todos={todos}
-          onComplete={onComplete}
-        />
+      {todos.map((todo) => (
+        <ItemTodo todo={todo} key={todo.id} onComplete={onComplete} />
       ))}
     </div>
   );
-};
-
-export default TodoList;
+}
