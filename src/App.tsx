@@ -1,6 +1,6 @@
 // ? https://javascript.plainenglish.io/react-typescript-813b02ff3672
 import InputField from "./components/InputField/InputField";
-import TodoList from "./components/TodoList";
+import TodoList from "./components/TodoList/TodoList";
 import "./App.css";
 import useTodos from "./hooks/useTodos";
 
@@ -8,7 +8,6 @@ const userName = "Mouaz";
 
 // ! topics of interest
 // react context
-// test
 // linter
 // usecallback
 // usememo

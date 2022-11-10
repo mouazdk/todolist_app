@@ -1,0 +1,13 @@
+.input--form {
+    display: flex;
+    width: 50%;
+    position: relative;
+    align-items: center;
+}
+
+.todo--list {
+   display: flex;
+   justify-content: space-evenly;
+   width: 90%;
+   flex-wrap: wrap;
+}

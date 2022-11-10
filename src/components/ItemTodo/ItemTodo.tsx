@@ -1,5 +1,6 @@
-import Todo from "../model";
+import Todo from "../../model";
 import { MdDone } from "react-icons/md";
+import "./ItemTodo.css"
 
 type ItemTodoProps = {
   onComplete: (id: number) => void;
@@ -9,7 +10,7 @@ type ItemTodoProps = {
 export default function ItemTodo({ todo, onComplete }: ItemTodoProps) {
   return (
     <div>
-      <span className={`todo--list-item${todo.isDone ? " todo--done" : ""}`}>
+      <span className={`todo_item ${todo.isDone ? "todo_item-done" : ""}`}>
         {todo.value}
       </span>
       <div>

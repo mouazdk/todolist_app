@@ -1,18 +1,4 @@
-.input--form {
-    display: flex;
-    width: 50%;
-    position: relative;
-    align-items: center;
-}
-
-.todo--list {
-   display: flex;
-   justify-content: space-evenly;
-   width: 90%;
-   flex-wrap: wrap;
-
-}
-.todo--list-item {
+.todo_item {
     font-family: monospace;
     font-size: 25px;
     border-radius: 10px;
@@ -21,7 +7,7 @@
     margin-top: 1em;
     display: flex;
 }
-.todo--done {
+.todo_item-done {
     background-color: green;
     text-decoration:line-through;
 }
